@@ -2,15 +2,20 @@ import { MenuFoldOutlined, MenuUnfoldOutlined,UserOutlined } from "@ant-design/i
 
 import React, { useState } from "react";
 import { Layout,Dropdown,Menu,Avatar } from "antd";
-// import { useNavigate } from "react-router";
+ import { useNavigate } from "react-router";
 const { Header } = Layout;
 
 export default function TopHeader() {
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const changeCollapsed = () => {
     setCollapsed(!collapsed);
   };
+ const  Quit = () => {
 
+  // localStorage.removeItem('token')
+    navigate('/login')
+}
  
 
   const menu = (
@@ -25,7 +30,7 @@ export default function TopHeader() {
         key: '2',
      danger:true,//设置警示
         label: '退出',
-      //  onClick:quit,
+       onClick:Quit,
        
       },
   
