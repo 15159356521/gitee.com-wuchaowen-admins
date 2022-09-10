@@ -3,8 +3,11 @@ import { Button, Form, Input } from 'antd';
 import { UserOutlined,LockOutlined } from "@ant-design/icons";
 import React from 'react'
 import { useNavigate } from "react-router";
-
-const layout = {
+//引入粒子效果
+import Particles from "react-tsparticles";
+import { particlesInit, particlesLoaded, options } from "./grain";
+export default function Login() {
+  const layout = {
  
   wrapperCol: {
     span: 16,
@@ -29,7 +32,6 @@ export default function Login() {
   const onReset = () => {
     form.resetFields();
   };
-
 
   return (
 
