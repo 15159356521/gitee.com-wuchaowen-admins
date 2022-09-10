@@ -1,21 +1,21 @@
 //引入
-import Particles from 'react-tsparticles'
+// import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
 //组件的最外层
 
-const particlesInit = async (main) => {
+export const particlesInit = async (main) => {
     await loadFull(main);
 };
 
 //粒子被正确加载到画布中时，这个函数被调用
-const particlesLoaded = (container) => {
+export const particlesLoaded = (container) => {
     console.log("123", container);
 };
 //粒子参数
-const options = {
+export const options = {
     "background": {
         "color": {
-            "value": "#232741"
+            "value": "#3399CC"
         },
         "position": "50% 50%",
         "repeat": "no-repeat",
